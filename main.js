@@ -134,5 +134,10 @@ for(const song of firstSet){
 // BONUS IF YOU HAVE TIME...
 // Using only properties of the event object we've previously defined
 // TODO: Insert the bandVenueDate string into the innerHTML of the element with the id of "header" in index.html
-
+document.querySelector("#header").innerHTML = bandVenueDate
 // TODO: Iterate the first set of songs for that event, create a list element for each song with the song's title and insert that new list element into the innerHTML of the element with the id of "setlist" in index.html
+document.querySelector("#setlist").innerHTML = `
+    <ul>
+        ${firstSet.map(song => `<li>${song.name}</li>`).join("")}
+    </ul>
+`
